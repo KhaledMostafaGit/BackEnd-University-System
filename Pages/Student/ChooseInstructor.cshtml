@@ -1,0 +1,44 @@
+﻿@page
+@model MyApp.Namespace.ChooseInstructorModel
+@{
+    Layout = "/Pages/Shared/_StudentLayout.cshtml";
+
+}   
+@* <h1>Choose Instructor</h1> *@
+
+<div id="left-area">
+    <form method="post">
+            <label for="courseID" class="form-label fs-4 mt-3">Course ID:</label>
+            <input type="number" class="form-control mb-3" name="CourseID" id="courseID" placeholder="Enter Course ID"  value="1" required />
+        
+
+        
+            <label for="InstructorID" class="form-label fs-4 mt-3">Instructor ID:</label>
+            <input type="number" class="form-control mb-3" name="InstructorID" id="InstructorID" placeholder="Enter Instructor ID" value="1" required />
+        
+
+        
+            <label for="current_semester_code" class="form-label fs-4 mt-3">Current Semester Code:</label>
+            <input type="text" class="form-control mb-3" name="current_semester_code" id="current_semester_code" placeholder="Enter Semester Code" value="W23" required />
+        
+
+        <button type="submit" class="btn btn-secondary mt-3">Choose Instructor</button>
+    </form>
+</div>
+
+@if (Model.message.Length > 0)
+{
+    <div class="alert alert-success" role="alert">
+        @Model.message
+    </div>
+}
+
+<script>
+
+    @* const myButton = document.querySelector("button");
+
+    myButton.addEventListener("click", function (event) {
+        event.preventDefault();
+    }); *@
+
+</script>

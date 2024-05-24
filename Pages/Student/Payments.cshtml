@@ -1,0 +1,28 @@
+﻿@page
+@model MyApp.Namespace.PaymentsModel
+@{
+    Layout = "/Pages/Shared/_StudentLayout.cshtml";
+}
+
+<h1>
+    Student Upcoming Installments
+</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Installment Deadline</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+       
+            <tr>
+                <td>
+                        @Model.Installment_deadline
+             
+                </td>
+            </tr>
+        
+    </tbody>
+</table>

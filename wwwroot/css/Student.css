@@ -1,0 +1,206 @@
+:root {
+    --navbarHeight: 7vh; /* Adjust this value based on your navbar height */
+    /* --main-color : orange */
+    --main-color : #f5cb7f;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+nav {
+    height: var(--navbarHeight);
+}
+
+body {
+    background-color: #888787;
+}
+
+a {
+    text-decoration: none;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link{
+    font-size: larger;
+}
+
+.custom-bg-black {
+    background-color: #2e2e2e !important; /* Use !important to override Bootstrap styles */
+}
+
+
+/* Optional: Adjust styling for better visibility on hover */
+.dropdown-item:focus, .dropdown-item:hover{
+    background-color: #555; /* Change the color to your desired color */
+    color: #fff; /* Change the text color to your desired color */
+}
+
+
+.dropdown-menu li{
+    padding-bottom: 5px; /* Adjust the padding as needed */
+}
+
+.dropdown-menu li{
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+    color: white;
+}
+
+#pageContent {
+    background-color: var(--main-color);
+    width: 100%;
+    display: flex;
+    /* gap: 200px; */
+    gap: 10.417vw;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - var(--navbarHeight));
+}
+
+
+#left-area {
+    width: 20.833vw;
+    min-height: 37.037vh;
+    /* background-color: red; */
+    background-color: rgb(49, 49, 49);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    text-align: center;
+    flex-direction: column;
+}
+
+#left-area input {
+    width: 11.458vw;
+}
+#left-area button[type="submit"] {
+    background-color: var(--main-color);
+    background-color: orange;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#left-area h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: red;
+}
+
+#right-area {
+    /* background-color: blue; */
+    background-color: rgb(49, 49, 49);
+
+    width: 57.292vw;
+    /* height:36.458vw; */
+    min-height:83.34vh;
+
+    border-radius: 30px;
+
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 94%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    max-height: 100%;
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #495057;
+    background-color: #585858;
+    color: #fcfcfc;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+tr:nth-child(odd) {
+    background-color: #b9b9b9;
+}
+
+tr:hover {
+    background-color: #deebf7;
+}
+
+#right-area h1 {
+    margin-top: 1vh;
+    margin-bottom: -1vh;
+    color: white;
+}
+
+#left-area .form-check-input[type="radio"] {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+#student-info{
+    width: 40vw;
+    height: 70vh;
+    background-color: rgb(65, 64, 64);
+    border-radius: 5vh;
+    color: white;
+
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-left: 5vh;
+}
+
+#student-info h1 {
+    margin-bottom: 5vh;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    /* font-family: ; */
+}
+#student-info strong {
+    font-size: 18px;
+    font-style: bold;
+    color: #6cb97d;
+}
+#student-info p {
+    font-size: 16px;
+}
+

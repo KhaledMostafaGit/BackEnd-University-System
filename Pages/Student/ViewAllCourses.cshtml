@@ -1,0 +1,45 @@
+﻿@page
+@model MyApp.Namespace.ListCoursesSlotsInstructorsModel
+@{
+    Layout = "/Pages/Shared/_StudentLayout.cshtml";
+}
+
+
+<div id="right-area">
+    <h1>
+        Courses Schedule
+    </h1>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Instructor ID</th>
+                <th>Instructor Name</th>
+                <th>Slot ID</th>
+                <th>Time</th>
+                <th>Day</th>
+                <th>Location</th>
+                @* <th>constructorid</th> *@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var CoursesSlotsInstructor in Model.CoursesSlotsInstructors)
+            {
+                <tr>
+                    <td>@CoursesSlotsInstructor.course_id</td>
+                    <td>@CoursesSlotsInstructor.courseName</td>
+                    <td>@CoursesSlotsInstructor.instructorid</td>
+                    <td>@CoursesSlotsInstructor.instructor</td>
+                    <td>@CoursesSlotsInstructor.slot_id</td>
+                    <td>@CoursesSlotsInstructor.time</td>
+                    <td>@CoursesSlotsInstructor.day</td>
+                    <td>@CoursesSlotsInstructor.location</td>
+                    @* <td>@CoursesSlotsInstructor.constructorid</td> *@
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

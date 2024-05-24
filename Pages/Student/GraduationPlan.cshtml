@@ -1,0 +1,37 @@
+﻿@page
+@model MyApp.Namespace.StudentViewGPModel
+@{
+    Layout = "/Pages/Shared/_StudentLayout.cshtml";
+}
+
+<div id="right-area">
+    <h1>Graduation Plan</h1>
+
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Graduation Plan ID</th>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Advisor ID</th>
+            <th>Semester Code</th>
+            <th>Semester Credit Hours</th>
+            <th>Expected Graduation Date</th>
+        </tr>
+        @foreach (var studentViewGPResult in Model.StudentViewGPList)
+        {
+            <tr>
+                <td>@studentViewGPResult.Student_Id</td>
+                <td>@studentViewGPResult.Student_name</td>
+                <td>@studentViewGPResult.graduation_Plan_Id</td>
+                <td>@studentViewGPResult.Course_id</td>
+                <td>@studentViewGPResult.Course_name</td>
+                <td>@studentViewGPResult.advisor_id</td>
+                <td>@studentViewGPResult.Semester_code</td>
+                <td>@studentViewGPResult.Semester_credit_hours</td>
+                <td>@studentViewGPResult.expected_grad_date?.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </table>
+</div>

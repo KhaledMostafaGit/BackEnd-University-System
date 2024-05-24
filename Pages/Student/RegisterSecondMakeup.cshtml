@@ -1,0 +1,35 @@
+﻿@page
+@model MyApp.Namespace.RegisterSecondMakeupModel
+@{
+    Layout = "/Pages/Shared/_StudentLayout.cshtml";
+
+}
+
+<div id="left-area">
+    <h1>Second Makeup</h1>
+    <form method="Post">
+
+        <label for="courseID" class="form-label fs-4 mt-3">Course ID:</label>
+        <input type="number" class="form-control mb-3" name="courseID" id="courseID" placeholder="Enter Course ID" value="1" required />
+
+        <label for="Student_Current_Semester" class="form-label fs-4 mt-3">Student Current Semester:</label>
+        <input type="text" class="form-control mb-3" name="Student_Current_Semester" id="Student_Current_Semester" placeholder="Enter Semester Code" value="S23" required/>
+
+        <button type="submit" class="btn btn-secondary mt-3">Register</button>
+    </form>
+</div>
+
+
+@if (Model.message.Length > 0)
+{   
+    if(Model.message.Equals("Register for Second Makeup Successful")){
+        <div class="alert alert-success" role="alert">
+            @Model.message
+        </div>
+    }
+    else{
+        <div class="alert alert-danger" role="alert">
+            @Model.message
+        </div>
+    }
+}

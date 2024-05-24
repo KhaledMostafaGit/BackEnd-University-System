@@ -1,0 +1,28 @@
+﻿@page
+@model Milestone_3.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+
+<div id="login-page">
+    <div id="container">
+        @* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, enim?</p>*@
+
+        <form action="post">
+            <p>Login</p>
+
+            <p>Email</p>
+            <input type="text" name = "email">
+            
+            <p>Password</p>
+            <input type="text" name = "password">
+
+            <input type="submit">
+            <a asp-area="" asp-page="./Login/Login">Student</a>
+            <a asp-area="" asp-page="./Login/Login">Advisor</a>
+        </form>
+        <a asp-area="" asp-page="./Login/Login">Go to Login</a>
+    </div>
+    
+</div>

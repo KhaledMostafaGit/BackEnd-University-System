@@ -1,0 +1,39 @@
+﻿@page
+@model MyApp.Namespace.ViewCoursePrerequisitesModel
+@{
+    Layout = "/Pages/Shared/_StudentLayout.cshtml";
+}
+
+<div id="right-area">
+    <h1>Course Prerequisites</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Prerequisite Course ID</th>
+                <th>Prerequisite Course Name</th>
+                <th>Major</th>
+                <th>Is Offered</th>
+                <th>Semester</th>
+                <th>Credit Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var coursePrerequisites in Model.CoursePrerequisitesList)
+            {
+                <tr>
+                    <td>@coursePrerequisites.course_id</td>
+                    <td>@coursePrerequisites.name</td>
+                    <td>@coursePrerequisites.prereq_courseid</td>
+                    <td>@coursePrerequisites.prereq_coursename</td>
+                    <td>@coursePrerequisites.major</td>
+                    <td>@(coursePrerequisites.is_offered ? "Yes" : "No")</td>
+                    <td>@coursePrerequisites.semester</td>
+                    <td>@coursePrerequisites.credit_hours</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
